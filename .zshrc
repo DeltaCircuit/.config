@@ -83,10 +83,6 @@ plugins=(fzf minikube zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
-SPACESHIP_USER_SHOW=always
-SPACESHIP_HOST_SHOW=always
-#SPACESHIP_HOST_SHOW_FULL=true
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -114,40 +110,8 @@ SPACESHIP_HOST_SHOW=always
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 #[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-function upgrade(){
-	sudo apt update;
-	sudo apt upgrade -y;
-	sudo apt autoremove -y;
-}
-
-function install(){
-	sudo apt update;
-	sudo apt install -y "$@";
-	sudo apt autoremove -y;
-}
-
-function remove(){
-	sudo apt remove -y "$@";
-	sudo apt autoremove -y;
-}
 
 . "$HOME/.cargo/env"
-
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/giri/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/giri/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/giri/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/giri/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
 
 # KubeCTL
@@ -156,13 +120,15 @@ unset __conda_setup
 # Added by Amplify CLI binary installer
 export PATH="$HOME/.amplify/bin:$PATH"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # timezsh() {
 #   shell=${1-$SHELL}
 #   for i in $(seq 1 10); do time $shell -i -c exit; done
 # }
 
-eval "$(starship init zsh)"
+# Load the dotfiles
+for DOTFILE in `find ~/.config/brahmastra/dotfiles/system`
+do
+  source "$DOTFILE"
+  [ -f “$DOTFILE” ] && source “$DOTFILE”
+done
