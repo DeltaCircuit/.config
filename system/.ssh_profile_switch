@@ -1,0 +1,15 @@
+# Switches the active SSH key
+function switch_ssh {
+    case $1 in
+        omcare)
+            echo "IdentityFile /home/giri/.ssh/omcare" > ~/.ssh/config
+        ;;
+	    experion)
+	        echo "IdentityFile /home/giri/.ssh/experion" > ~/.ssh/config
+	    ;;
+        ## Default
+        *)  
+            rm -rf ~/.ssh/config
+        ;;
+    esac
+}
