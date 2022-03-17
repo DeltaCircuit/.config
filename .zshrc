@@ -79,7 +79,7 @@ export ZSH="/home/giri/.oh-my-zsh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(fzf minikube zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(fzf minikube zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
