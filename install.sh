@@ -20,12 +20,16 @@ echo "Installing FiraCode Nerd Fonts"
 echo "Installing Starship theme..."
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 
+echo "Configuring Starship"
+ln -s "$(readlink -f ./config/starship.toml)" ~/.config/
+
 echo "Installing FZF"
 sudo apt install fzf -y
 
-echo "Cloning dot files"
-mkdir -p ~/.config/brahmastra
-git clone git@github.com:0x006F/dotfiles.git ~/.config/brahmastra/dotfiles
-~/.config/brahmastra/dotfiles/install.sh
+# echo "Cloning dot files"
+# mkdir -p ~/.config/brahmastra
+# git clone git@github.com:0x006F/dotfiles.git ~/.config/brahmastra/dotfiles
+# ~/.config/brahmastra/dotfiles/install.sh
 
+# Configuring ZSH
 ln -s "$(readlink -f ./.zshrc)" ~/
