@@ -1,9 +1,6 @@
 # Switches the active SSH key
 function switchssh {
     case $1 in
-        omcare)
-            echo "IdentityFile /home/giri/.ssh/omcare" > ~/.ssh/config
-        ;;
 	    experion)
 	        echo "IdentityFile /home/giri/.ssh/experion" > ~/.ssh/config
 	    ;;
