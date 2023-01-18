@@ -30,6 +30,8 @@ sudo apt install fonts-firacode unzip git fzf -y
 echo "Installing Starship Prompt"
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 
+ln -s ./starship.toml ~/.config/starship.toml
+
 echo "Installing FZF"
 sudo apt install fzf -y
 
