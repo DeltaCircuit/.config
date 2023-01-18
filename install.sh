@@ -8,7 +8,7 @@ sudo apt update
 sudo apt upgrade -y
 
 echo "Installing Awesome WM"
-sudo apt install awesome xinit arandr autorandr suckless-tools -y
+sudo apt install awesome xinit arandr autorandr suckless-tools alacritty -y
 
 awesome_folder_path=$(readlink -f ./awesome/)
 (cd ~/.config;ln -s "$awesome_folder_path" .)
@@ -37,6 +37,8 @@ ln -s $(readlink -f ./starship.toml) ~/.config/
 
 echo "Installing FZF"
 sudo apt install fzf -y
+
+ln -s $(readlink -f ./alacritty.yml) ~/.config/
 
 # # echo "Cloning dot files"
 # # mkdir -p ~/.config/brahmastra
