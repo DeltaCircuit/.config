@@ -1,0 +1,12 @@
+# Switches the active SSH key
+function switchssh {
+    case $1 in
+	    experion)
+	        echo "IdentityFile /home/giri/.ssh/experion" > ~/.ssh/config
+	    ;;
+        ## Default
+        *)  
+            rm -rf ~/.ssh/config
+        ;;
+    esac
+}
