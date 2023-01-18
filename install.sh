@@ -20,6 +20,9 @@ echo "Changing default shell to ZSH"
 chsh -s $(which zsh)
 rm -rf ~/.zshrc
 
+shell_helpers=$(readlink -f ./shell_helpers)
+(cd ~/.config;ln -s "$shell_helpers" .)
+
 # Configuring ZSH
 ln -s "$(readlink -f ./.zshrc)" ~/
 
@@ -30,7 +33,7 @@ sudo apt install fonts-firacode unzip git fzf -y
 echo "Installing Starship Prompt"
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 
-ln -s ./starship.toml ~/.config/starship.toml
+ln -s $(readlink -f ./starship.toml) ~/.config/
 
 echo "Installing FZF"
 sudo apt install fzf -y
