@@ -8,7 +8,7 @@ sudo apt update
 sudo apt upgrade -y
 
 echo "Installing Awesome WM"
-sudo apt install awesome xinit arandr autorandr suckless-tools alacritty -y
+sudo apt install awesome xinit arandr autorandr suckless-tools alacritty compton network-manager blueman -y
 
 awesome_folder_path=$(readlink -f ./awesome/)
 (cd ~/.config;ln -s "$awesome_folder_path" .)
