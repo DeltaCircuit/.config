@@ -13,16 +13,12 @@ sudo apt install awesome xinit arandr autorandr suckless-tools -y
 echo "Installing ZSH"
 sudo apt install zsh -y
 
-# echo "Changing default shell to ZSH"
-# chsh -s $(which zsh)
-# rm -rf ~/.zshrc
+echo "Changing default shell to ZSH"
+chsh -s $(which zsh)
+rm -rf ~/.zshrc
 
-echo "Create config folder"
-mkdir -p ~/.config
-
-ln -s ./awesome ~/.config/awesome
-
-awesome -k
+# Configuring ZSH
+ln -s "$(readlink -f ./.zshrc)" ~/
 
 # echo "Installing FiraCode Nerd Fonts"
 
@@ -41,5 +37,3 @@ awesome -k
 # # git clone git@github.com:0x006F/dotfiles.git ~/.config/brahmastra/dotfiles
 # # ~/.config/brahmastra/dotfiles/install.sh
 
-# # Configuring ZSH
-# ln -s "$(readlink -f ./.zshrc)" ~/

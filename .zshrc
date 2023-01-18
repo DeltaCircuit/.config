@@ -37,7 +37,7 @@ export PATH="$HOME/.amplify/bin:$PATH"
 
 
 # Load the dotfiles
-for DOTFILE in `find ~/.config/brahmastra/dotfiles/system`
+for DOTFILE in `find ~/.config/shell_helpers/`
 do
   source "$DOTFILE"
   [ -f “$DOTFILE” ] && source “$DOTFILE”
