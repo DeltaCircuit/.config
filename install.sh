@@ -20,17 +20,15 @@ rm -rf ~/.zshrc
 # Configuring ZSH
 ln -s "$(readlink -f ./.zshrc)" ~/
 
-# echo "Installing FiraCode Nerd Fonts"
+echo "Installing tools"
+sudo apt install fonts-firacode unzip git fzf -y
 
 
-# echo "Installing Starship theme..."
-# sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+echo "Installing Starship Prompt"
+sh -c "$(curl -fsSL https://starship.rs/install.sh)"
 
-# echo "Configuring Starship"
-# ln -s "$(readlink -f ./config/starship.toml)" ~/.config/
-
-# echo "Installing FZF"
-# sudo apt install fzf -y
+echo "Installing FZF"
+sudo apt install fzf -y
 
 # # echo "Cloning dot files"
 # # mkdir -p ~/.config/brahmastra

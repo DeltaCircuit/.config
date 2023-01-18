@@ -26,7 +26,7 @@ compinit
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-. "$HOME/.cargo/env"
+#. "$HOME/.cargo/env"
 
 
 # KubeCTL
