@@ -1,4 +1,4 @@
-echo "Installing Base System"\n
+echo "Installing Base System"
 
 echo "Obtaining sudo"
 sudo -v
