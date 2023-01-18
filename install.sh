@@ -10,6 +10,9 @@ sudo apt upgrade -y
 echo "Installing Awesome WM"
 sudo apt install awesome xinit arandr autorandr suckless-tools -y
 
+awesome_folder_path=$(readlink -f ./awesome/)
+(cd ~/.config;ln -s "$awesome_folder_path" .)
+
 echo "Installing ZSH"
 sudo apt install zsh -y
 
