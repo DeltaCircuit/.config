@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "Installing Base System"
 
 echo "Obtaining sudo"
@@ -40,8 +42,8 @@ sudo apt install fzf -y
 
 ln -s $(readlink -f ./alacritty.yml) ~/.config/
 
-# # echo "Cloning dot files"
-# # mkdir -p ~/.config/brahmastra
-# # git clone git@github.com:0x006F/dotfiles.git ~/.config/brahmastra/dotfiles
-# # ~/.config/brahmastra/dotfiles/install.sh
+(cd awesome;git clone https://github.com/streetturtle/awesome-wm-widgets.git)
 
+# Keep only relavant plugins
+GLOBIGNORE=pactl-widget:battery-widget
+(cd awesome/awesome-wm-widgets;rm -rf -- *)
