@@ -1,0 +1,39 @@
+# Switch rclone profiles on-the-fly
+
+function switch-rclone(){
+
+    available=(ec_az ec_aws ec_od br_az br_aws br_od)
+
+    if [ -z $1 ]
+    then
+        echo "please provide a config name"
+        echo $available
+    else 
+        case $1 in
+            ec_az)
+                export RCLONE_CONFIG=~/.config/rclone_configs/entecloud.azure.conf
+            ;;
+            ec_aws)
+                export RCLONE_CONFIG=~/.config/rclone_configs/entecloud.aws.conf
+            ;;
+            ec_az)
+                export RCLONE_CONFIG=~/.config/rclone_configs/entecloud.onedrive.conf
+            ;;
+            br_az)
+                export RCLONE_CONFIG=~/.config/rclone_configs/brahmastra.azure.conf
+            ;;
+            br_aws)
+                export RCLONE_CONFIG=~/.config/rclone_configs/brahmastra.aws.conf
+            ;;
+            br_od)
+                export RCLONE_CONFIG=~/.config/rclone_configs/brahmastra.onedrive.conf
+            ;;                        
+            ## Default
+            *)
+                echo "Unhandled profile"
+            ;;
+        esac
+
+    fi
+
+}
