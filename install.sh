@@ -29,8 +29,10 @@ shell_helpers=$(readlink -f ./shell_helpers)
 ln -s "$(readlink -f ./.zshrc)" ~/
 
 echo "Installing tools"
-sudo apt install fonts-firacode unzip git fzf -y
+sudo apt install fonts-firacode unzip git fzf wireplumber pipewire-media-session- pipewire-pulse pavucontrol fonts-noto-color-emoji -y
 
+echo "Configuring PipeWire"
+systemctl --user --now enable wireplumber.service
 
 echo "Installing Starship Prompt"
 sh -c "$(curl -fsSL https://starship.rs/install.sh)"
@@ -40,10 +42,13 @@ ln -s $(readlink -f ./starship.toml) ~/.config/
 echo "Installing FZF"
 sudo apt install fzf -y
 
+echo "Configuring Alacritty"
+
 ln -s $(readlink -f ./alacritty.yml) ~/.config/
 
+echo "Setting up awesome wm widgets"
 (cd awesome;git clone https://github.com/streetturtle/awesome-wm-widgets.git)
 
-# Keep only relavant plugins
+Keep only relavant plugins
 GLOBIGNORE=pactl-widget:volume-widget:battery-widget
 (cd awesome/awesome-wm-widgets;rm -rf -- *)
