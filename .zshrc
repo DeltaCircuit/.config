@@ -34,6 +34,7 @@ compinit
 
 # Added by Amplify CLI binary installer
 export PATH="$HOME/.amplify/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 
 # Load the dotfiles
