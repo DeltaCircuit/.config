@@ -363,7 +363,7 @@ clientkeys = gears.table.join(
             c:raise()
         end,
         {description = "toggle fullscreen", group = "client"}),
-    awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end,
+    awful.key({ "Control", "Shift"   }, "q",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
               {description = "toggle floating", group = "client"}),
@@ -592,3 +592,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- awful.spawn.with_shell("nm-tray")
 awful.spawn.with_shell("autorandr --change")
+
+-- Numlock
+awful.spawn.once("numlockx on")
