@@ -48,6 +48,10 @@ echo "Configuring Alacritty"
 
 ln -s $(readlink -f ./alacritty.yml) ~/.config/
 
+echo "Configuring Helix Editor"
+mkdir -p ~/.config/helix
+ln -s $(readlink -f ./helix-config.toml) ~/.config/helix/config.toml
+
 echo "Setting up awesome wm widgets"
 (cd awesome;git clone https://github.com/streetturtle/awesome-wm-widgets.git)
 
