@@ -24,6 +24,8 @@ local has_fdo, freedesktop = pcall(require, "freedesktop")
 
 -- Custom Widgets
 local volume_widget = require('awesome-wm-widgets.pactl-widget.volume')
+local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
+
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -231,6 +233,7 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
+	    battery_widget(),
             volume_widget(),
             wibox.widget.systray(),
             mytextclock,
