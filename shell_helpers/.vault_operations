@@ -1,0 +1,11 @@
+function unlock_vault(){
+    sudo -v
+    sudo cryptsetup luksOpen /dev/nvme0n1 vault
+    sudo mount /dev/mapper/vault /media/vault
+}
+
+function lock_vault(){
+    sudo -v
+    sudo umount /media/vault
+    sudo cryptsetup close vault
+}
