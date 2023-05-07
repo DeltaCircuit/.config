@@ -595,6 +595,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- awful.spawn.with_shell("nm-tray")
 awful.spawn.with_shell("autorandr --change")
+awful.spawn.with_shell("compton")
 
 -- Numlock
 awful.spawn.once("numlockx on")
