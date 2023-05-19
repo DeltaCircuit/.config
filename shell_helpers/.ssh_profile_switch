@@ -4,6 +4,12 @@ function switchssh {
 	    experion)
 	        echo "IdentityFile /home/giri/.ssh/experion" > ~/.ssh/config
 	    ;;
+        tmna)
+            echo "IdentityFile /home/giri/.ssh/tmna" > ~/.ssh/config
+        ;;
+        gruntwork)
+            echo "IdentityFile /home/giri/.ssh/gruntwork" > ~/.ssh/config
+        ;;
         ## Default
         *)  
             rm -rf ~/.ssh/config
