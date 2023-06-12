@@ -55,6 +55,6 @@ ln -s $(readlink -f ./helix-config.toml) ~/.config/helix/config.toml
 echo "Setting up awesome wm widgets"
 (cd awesome;git clone https://github.com/streetturtle/awesome-wm-widgets.git)
 
-Keep only relavant plugins
+# Keep only relavant plugins
 GLOBIGNORE=pactl-widget:volume-widget:battery-widget
 (cd awesome/awesome-wm-widgets;rm -rf -- *)
