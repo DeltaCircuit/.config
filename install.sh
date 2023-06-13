@@ -52,6 +52,16 @@ echo "Configuring Helix Editor"
 mkdir -p ~/.config/helix
 ln -s $(readlink -f ./helix-config.toml) ~/.config/helix/config.toml
 
+echo "Configuring Lua Language Server for Helix"
+wget "https://github.com/LuaLS/lua-language-server/releases/download/3.6.21/lua-language-server-3.6.21-linux-x64.tar.gz" -O lua.tar.gz
+mkdir ./cache
+mv lua.tar.gz ./cache
+(cd cache;tar xvf lua.tar.gz)
+mkdir -p ~/.local/share/apps/lua-ls
+mv cache/bin/lua-language-server ~/.local/share/apps/lua-ls
+sudo ln -s $(readlink -f ~/.local/share/apps/lua-ls/lua-language-server) /usr/bin/lua-language-server
+rm -rf cache
+
 echo "Setting up awesome wm widgets"
 (cd awesome;git clone https://github.com/streetturtle/awesome-wm-widgets.git)
 
