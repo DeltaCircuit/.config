@@ -25,7 +25,11 @@ local has_fdo, freedesktop = pcall(require, "freedesktop")
 -- Custom Widgets
 local volume_widget = require('awesome-wm-widgets.pactl-widget.volume')
 local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
+local calendar_widget = require('awesome-wm-widgets.calendar-widget.calendar')
 
+local cw = calendar_widget({
+  placement = "top_right"
+})
 
 -- {{{ Error handling
 -- Check if awesome encountered an error dumpring startup and fell back to
@@ -139,6 +143,7 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
 
+mytextclock:connect_signal("button::press", function(_, _, _, button) if button ==1 then cw.toggle() end end)
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
   awful.button({}, 1, function(t) t:view_only() end),
