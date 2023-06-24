@@ -544,10 +544,10 @@ awful.rules.rules = {
   -- },
 
   -- Set Firefox to always map on the tag named "2" on screen 1.
-  {
-    rule = { class = "firefox" },
-    properties = { tag = " www ", floating = true }
-  },
+ -- {
+    --rule = { class = "firefox" },
+    --properties = { tag = " www ", floating = true }
+  --},
   {
     rule_any = { class = { "vscodium", "VSCodium" } },
     properties = { tag = " dev ", floating = true }
