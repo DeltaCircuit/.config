@@ -3,3 +3,9 @@ theme = "nord"
 
 [editor]
 idle-timeout = 0
+
+[editor.file-picker]
+hidden = false
+
+[editor.lsp]
+display-messages = true
