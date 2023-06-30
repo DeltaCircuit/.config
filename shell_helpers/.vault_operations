@@ -1,6 +1,8 @@
 function unlock_vault(){
     sudo -v
-    sudo cryptsetup luksOpen /dev/nvme0n1 vault
+    device_id=$(sudo blkid | grep crypto_LUKS | grep -v PARTUUID | cut -d ":" -f 1 | xargs)
+    echo $device_id
+    sudo cryptsetup luksOpen "$device_id" vault
     sudo mount /dev/mapper/vault /media/vault
 }
 
