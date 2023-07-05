@@ -1,0 +1,14 @@
+function git_init_public(){
+	git init .
+	git config user.name "DeltaCircuit"
+	git config user.email "2258588+DeltaCircuit@users.noreply.github.com"
+	git config commit.gpgsign true	
+}
+
+function git_init_ec(){
+	git init .
+	git config user.name giri
+	git config user.email giri@ente.cloud
+	git config commit.gpgsign true
+	git config core.editor hx
+}
