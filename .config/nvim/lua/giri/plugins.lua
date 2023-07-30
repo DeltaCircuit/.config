@@ -26,7 +26,14 @@ local plugins = {
 },
 {
 	'folke/trouble.nvim',
-	name = 'trouble'
+	name = 'trouble',
+	dependencies = {
+		"nvim-tree/nvim-web-devicons"
+	}
+},
+{
+	'tpope/vim-fugitive',
+	name = 'fugitive'
 }
 }
 
