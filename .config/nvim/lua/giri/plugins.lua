@@ -52,8 +52,12 @@ local plugins = {
   {
     'nvim-lualine/lualine.nvim',
     name = 'lualine'
+  },
+  {
+    'j-hui/fidget.nvim',
+    tag = 'legacy',
+    event = 'LspAttach'
   }
-
 }
 
 return plugins
