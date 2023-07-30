@@ -23,6 +23,10 @@ local plugins = {
 	'nvim-treesitter/nvim-treesitter', 
 	name = 'treesitter',
 	build = ":TSUpdate"
+},
+{
+	'folke/trouble.nvim',
+	name = 'trouble'
 }
 }
 
