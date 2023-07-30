@@ -8,13 +8,17 @@ hidden = false
 
 [editor.lsp]
 display-messages = true
-# display-inlay-hints = true
+display-inlay-hints = true
+auto-signature-help = false
+display-signature-help-docs = false
 
 [keys.insert]
 C-s = ":w"
 C-q = "normal_mode"
+C-space = "signature_help"
+C-z = "undo"
 
 [keys.normal]
 C-s = ":w"
 C-q = ":quit!"
-
+C-z = "undo"
