@@ -34,7 +34,22 @@ local plugins = {
 {
 	'tpope/vim-fugitive',
 	name = 'fugitive'
+},
+{
+	'williamboman/mason-lspconfig.nvim',
+	name = 'mason_lspconfig',
+	dependencies = { 
+		{ 
+			'neovim/nvim-lspconfig',
+			name = 'lspconfig'
+		},
+		{
+			'williamboman/mason.nvim',
+			name = 'mason'
+		}
+	}
 }
+
 }
 
 return plugins
