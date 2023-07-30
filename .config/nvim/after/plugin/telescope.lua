@@ -1,4 +1,18 @@
 local builtin = require("telescope.builtin")
+local telescope = require('telescope')
+
+telescope.setup {
+  defaults = {
+    layout_config = {
+      prompt_position = 'top'
+    }
+  },
+  pickers = {
+    find_files = {
+      find_command =  { 'rg', '--files', '--hidden', '-g', '!.git' }
+    }
+  }
+}
 
 local set = vim.keymap.set
 
