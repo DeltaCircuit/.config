@@ -48,6 +48,10 @@ local plugins = {
         name = 'mason'
       }
     }
+  },
+  {
+    'nvim-lualine/lualine.nvim',
+    name = 'lualine'
   }
 
 }
