@@ -72,6 +72,22 @@ local plugins = {
     cond = function()
       return vim.fn.executable 'make' == 1
     end
+  },
+  {
+    'hrsh7th/nvim-cmp',
+    dependencies = {
+      'hrsh7th/cmp-cmdline',
+      'hrsh7th/cmp-path',
+      'hrsh7th/cmp-buffer',
+      'hrsh7th/cmp-nvim-lsp',
+      'neovim/nvim-lspconfig'
+    }
+  },
+  {
+    'hrsh7th/vim-vsnip',
+    dependencies = {
+      'hrsh7th/cmp-vsnip'
+    }
   }
 }
 
