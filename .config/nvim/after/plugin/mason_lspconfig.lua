@@ -36,7 +36,8 @@ local servers = {
   },
   terraformls = {
     filetypes = { "*.tf", "*.tfvars" }
-  }
+  },
+  tsserver={}
 }
 
 mason.setup()
