@@ -57,6 +57,21 @@ local plugins = {
     'j-hui/fidget.nvim',
     tag = 'legacy',
     event = 'LspAttach'
+  },
+  {
+    'jose-elias-alvarez/null-ls.nvim',
+    name = 'null_ls',
+    dependencies = {
+      'nvim-lua/plenary.nvim'
+    }
+  },
+  {
+    'nvim-telescope/telescope-fzf-native.nvim',
+    name = 'telescope_fzf_native',
+    build = 'make',
+    cond = function()
+      return vim.fn.executable 'make' == 1
+    end
   }
 }
 
