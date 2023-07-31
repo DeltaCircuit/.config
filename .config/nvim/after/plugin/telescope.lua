@@ -14,6 +14,7 @@ telescope.setup {
     }
   }
 }
+telescope.load_extension('fzf')
 
 local set = vim.keymap.set
 
