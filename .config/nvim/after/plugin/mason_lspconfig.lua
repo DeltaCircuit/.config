@@ -33,6 +33,9 @@ local servers = {
       workspace = { checkThirdParty = false },
       telemetry = { enabled = false }
     }
+  },
+  terraformls = {
+    filetypes = { "*.tf", "*.tfvars" }
   }
 }
 
