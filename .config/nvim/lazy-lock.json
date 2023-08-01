@@ -17,6 +17,7 @@
   "nvim-lspconfig": { "branch": "master", "commit": "b6091272422bb0fbd729f7f5d17a56d37499c54f" },
   "nvim-web-devicons": { "branch": "master", "commit": "efbfed0567ef4bfac3ce630524a0f6c8451c5534" },
   "plenary.nvim": { "branch": "master", "commit": "267282a9ce242bbb0c5dc31445b6d353bed978bb" },
+  "rust_tools": { "branch": "master", "commit": "0cc8adab23117783a0292a0c8a2fbed1005dc645" },
   "telescope": { "branch": "0.1.x", "commit": "776b509f80dd49d8205b9b0d94485568236d1192" },
   "telescope_fzf_native": { "branch": "main", "commit": "9bc8237565ded606e6c366a71c64c0af25cd7a50" },
   "treesitter": { "branch": "master", "commit": "82c948653909d8c1582f28313aa1cf9d68d66fe8" },

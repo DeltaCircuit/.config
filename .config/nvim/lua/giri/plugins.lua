@@ -88,6 +88,13 @@ local plugins = {
     dependencies = {
       'hrsh7th/cmp-vsnip'
     }
+  },
+  {
+    'simrat39/rust-tools.nvim',
+    name = "rust_tools",
+    dependencies = {
+      'neovim/nvim-lspconfig'
+    }
   }
 }
 
