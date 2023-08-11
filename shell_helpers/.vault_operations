@@ -1,8 +1,8 @@
 function unlock_vault(){
     sudo -v
     device_id=$(sudo blkid | grep crypto_LUKS | grep -v PARTUUID | cut -d ":" -f 1 | xargs)
-    echo $device_id
-    sudo cryptsetup luksOpen "$device_id" vault
+    passphrase=$(whiptail --passwordbox "LUKS Decrypt" 8 78 --title "$device_id" 3>&1 1>&2 2>&3)
+    echo $passphrase | sudo cryptsetup luksOpen "$device_id" vault -
     sudo mount /dev/mapper/vault /media/vault
 }
 
