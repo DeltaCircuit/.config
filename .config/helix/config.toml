@@ -1,4 +1,4 @@
-theme = "papercolor-dark"
+theme = "catppuccin_frappe"
 
 [editor]
 idle-timeout = 0
@@ -12,9 +12,14 @@ display-inlay-hints = true
 auto-signature-help = false
 display-signature-help-docs = false
 
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "block"
+
 [keys.insert]
 C-s = ":w"
-C-q = "normal_mode"
+C-c = "normal_mode"
 C-space = "signature_help"
 C-z = "undo"
 
