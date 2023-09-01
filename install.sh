@@ -31,7 +31,7 @@ shell_helpers=$(readlink -f ./shell_helpers)
 ln -s "$(readlink -f ./.zshrc)" ~/
 
 echo "Installing tools"
-sudo apt install fonts-firacode unzip git fzf wireplumber pipewire-media-session- pipewire-pulse pavucontrol fonts-noto-color-emoji pcmanfm libspa-0.2-bluetooth numlockx direnv fd-find cifs-utils whiptail -y
+sudo apt install fonts-firacode unzip git fzf wireplumber pipewire-media-session- pipewire-pulse pavucontrol fonts-noto-color-emoji pcmanfm libspa-0.2-bluetooth numlockx direnv fd-find cifs-utils whiptail wl-copy -y
 
 echo "Configuring PipeWire"
 systemctl --user --now enable wireplumber.service
