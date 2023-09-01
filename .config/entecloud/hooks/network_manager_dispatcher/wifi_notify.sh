@@ -6,8 +6,11 @@ function derive_base_name() {
     FTTH1 | GNXS-2.4G | KVFTTH)
       sudo -i -u giri notify-send "Connected to Guruvayur HQ $USER"
       ;;
-    YTLA_LAIR)
-      sudo -i -u giri notify-send "Connected to Vytila Base"
+    "ERS MOB")
+      sudo -i -u giri notify-send "Connected to ERS Main Operating Base"
+      ;;
+    "ERS FOB")
+      sudo -i -u giri notify-send "Connected to ERS Forward Operating Base"
       ;;
     DeltaFX)
       sudo -i -u giri notify-send --urgency normal "Connected to metered network!"
