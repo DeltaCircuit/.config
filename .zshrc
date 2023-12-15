@@ -1,3 +1,4 @@
+# zmodload zsh/zprof
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -43,3 +44,4 @@ do
   source "$DOTFILE"
   [ -f “$DOTFILE” ] && source “$DOTFILE”
 done
+# zprof
