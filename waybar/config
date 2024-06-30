@@ -3,6 +3,7 @@
   "layer": "top",
   "position": "top",
   "height": 30,
+  "spacing": 4,
 
   "modules-left": [
     "sway/workspaces",
@@ -74,8 +75,8 @@
 
   "network": {
     "interval": 5,
-    "format-wifi": "  {essid} ({signalStrength}%)",
-    "format-ethernet": "  {ifname}: {ipaddr}/{cidr}",
+    "format-wifi": "   {essid} ({signalStrength}%)",
+    "format-ethernet": "   {ifname}: {ipaddr}/{cidr}",
     "format-disconnected": "⚠  Disconnected",
     "tooltip-format": "{ifname}: {ipaddr}"
   },
