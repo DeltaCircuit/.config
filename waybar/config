@@ -4,6 +4,7 @@
   "position": "top",
   "height": 30,
   "spacing": 4,
+  "layer": "bottom",
 
   "modules-left": [
     "sway/workspaces",
