@@ -1,6 +1,5 @@
 {
 
-  // Global Configuration
   "layer": "top",
   "position": "top",
   "height": 30,
@@ -25,23 +24,20 @@
     "tray"
   ],
 
-  // Module Wise Configuration
   "battery": {
     "interval": 10,
     "states": {
       "warning": 30,
-      "critical": 15,
+      "critical": 15
     },
-    // Connected to AC
     "format": "  {icon}  {capacity}%",
-    // On Battery
     "format-discharging": "{icon} {capacity}%",
     "format-icons": [
-      "", // Icon: battery-full
-      "", // Icon: battery-three-quarters
-      "", // Icon: battery-half
-      "", // Icon: battery-quarter
-      ""  // Icon: battery-empty
+      "",
+      "",
+      "",
+      "",
+      ""
     ],
     "tooltip": true
   },
@@ -54,13 +50,13 @@
 
   "clock#date": {
     "interval": 10,
-    "format": "  {:%e %b %Y}", // Icon: calendar-alt
+    "format": "  {:%e %b %Y}", 
     "tooltip-format": "{:%e %B %Y}"
   },
 
   "cpu": {
     "interval": 5,
-    "format": "  {usage}% ({load})", // Icon: microchip
+    "format": "  {usage}% ({load})", 
     "states": {
       "warning": 70,
       "critical": 90
@@ -69,7 +65,7 @@
 
   "memory": {
     "interval": 5,
-    "format: "  {}%", // Icon: memory
+    "format": "  {}%",
     "states": {
       "warning": 70,
       "critical": 90
@@ -92,7 +88,7 @@
   "sway/window": {
     "all-outputs": false,
     "disable-scroll": true,
-    "format": "{icon} {name}",
+    "format": "{icon} {name}"
   },
 
   "temperature": {
