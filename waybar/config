@@ -30,8 +30,8 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "  {icon}  {capacity}%",
-    "format-discharging": "{icon} {capacity}%",
+    "format": " {icon}   {capacity}%",
+    "format-discharging": "{icon}   {capacity}%",
     "format-icons": [
       "",
       "",
