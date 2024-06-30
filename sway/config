@@ -214,4 +214,7 @@ bar {
     }
 }
 
-include @sysconfdir@/sway/config.d/*
+# font pango:Fira Sans 12
+
+# include @sysconfdir@/sway/config.d/*
+include ./config.d/*

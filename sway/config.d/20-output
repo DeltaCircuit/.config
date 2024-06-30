@@ -1,0 +1,5 @@
+# Dell External Monitor on the left side
+output DP-3 pos 0 0
+
+# Laptop Screen on the right side
+output eDP-1 pos 1920 0
