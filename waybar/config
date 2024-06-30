@@ -3,12 +3,11 @@
   "layer": "top",
   "position": "top",
   "height": 30,
-  "spacing": 4,
   "layer": "bottom",
 
   "modules-left": [
+    "sway/scratchpad",
     "sway/workspaces",
-    "sway/mode"
   ],
 
   "modules-center": [
