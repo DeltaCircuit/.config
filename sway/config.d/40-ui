@@ -1,0 +1,8 @@
+#for_window [app_id="flameshot"] border pixel 0, floating enable, fullscreen disable, move absolute position 0 0
+
+
+default_border none
+default_floating_border none
+titlebar_padding 1
+titlebar_border_thickness 0
+
