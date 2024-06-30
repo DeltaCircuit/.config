@@ -4,7 +4,7 @@ input * xkb_numlock enabled
 # Dell Precision Touchpad Enable
 # Execute swaymsg -t get_inputs to retrieve the touchpad device ID
 
-input 1102:4640:DELL0831:00_44E:1220_Touchpad { 
+input 1102:4640:DELL0831:00_044E:1220_Touchpad { 
   tap enabled
   natural_scroll enabled
   dwt enabled
