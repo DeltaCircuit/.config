@@ -15,7 +15,8 @@
   ],
 
   "modules-right": [
-    "pulseaudio/slider",
+    "pulseaudio#source",
+    "pulseaudio#sink",
     "network",
     "memory",
     "cpu",
@@ -116,5 +117,36 @@
   "tray": {
     "icon-size": 21,
     "spacing": 10
+  },
+
+  "pulseaudio#source": {
+    "format" : "{format_source}",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-icons": [""],
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+    "on-scroll-down": "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 1%+",
+    "on-scroll-up": "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SOURCE@ 1%+"
+  },
+
+  "pulseaudio#sink": {
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon}",
+    "format-bluetooth-muted": " {icon}",
+    "format-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click-right": "pavucontrol",
+    "on-scroll-down": "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 1%+",
+    "on-scroll-up": "wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 1%-"
   }
 }
