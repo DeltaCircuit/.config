@@ -2,12 +2,11 @@
 
   "layer": "top",
   "position": "top",
-  "height": 30,
   "layer": "bottom",
 
   "modules-left": [
     "sway/scratchpad",
-    "sway/workspaces",
+    "sway/workspaces"
   ],
 
   "modules-center": [
