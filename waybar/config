@@ -87,12 +87,7 @@
     "tooltip": false
   },
 
-  "sway/window": {
-    "all-outputs": false,
-    "disable-scroll": true,
-    "format": "{icon} {name}"
-  },
-  "sway/scratchpad": {
+   "sway/scratchpad": {
     "format": "{icon} {count}",
     "show-empty": false,
     "format-icons": ["", ""],
