@@ -1,4 +1,4 @@
-theme = "catppuccin_frappe"
+theme = "catppuccin_mocha"
 
 [editor]
 idle-timeout = 0
@@ -18,12 +18,14 @@ normal = "block"
 select = "block"
 
 [keys.insert]
+"C-/" = "toggle_comments"
 C-s = ":w"
 C-c = "normal_mode"
-C-space = "signature_help"
+C-space = "completion"
 C-z = "undo"
 
 [keys.normal]
+"C-/" = [ "toggle_comments", ":w" ]
 C-s = ":w"
 C-q = ":quit!"
 C-z = "undo"
