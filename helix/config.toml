@@ -29,3 +29,6 @@ C-z = "undo"
 C-s = ":w"
 C-q = ":quit!"
 C-z = "undo"
+
+[keys.select]
+"C-/" = [ "toggle_comments" ]
