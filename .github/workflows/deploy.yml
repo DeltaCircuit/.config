@@ -29,6 +29,7 @@ jobs:
 
       - name: Build Book  
         run: |
+          cd docs
           mdbook build
 
       - name: Upload build artifact  
