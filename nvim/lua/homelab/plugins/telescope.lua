@@ -41,6 +41,7 @@ return {
       builtin.current_buffer_fuzzy_find(telescope_themes.get_dropdown({ winblend = 10, previewer = false }))
     end, "[/] Fuzzy search in current buffer")
     nmap("<leader>gs", builtin.git_status, "[G]it [Status]")
-    nmap("<leader>ft", telescope.extensions.file_browser.file_browser(),"Open [F]ile [B]rowser")
+    nmap("<space>ft", ":Telescope file_browser path=%:p:h select_buffer=true<CR>", "[F]ile [T]tree")
+    --nmap("<leader>ft", telescope.extensions.file_browser.file_browser(),"Open [F]ile [B]rowser")
   end,
 }}
