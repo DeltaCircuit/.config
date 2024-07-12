@@ -52,7 +52,7 @@
 
   "clock#date": {
     "interval": 10,
-    "format": "  {:%e %b %Y}", 
+    "format": "  {:%Y-%m-%d}", 
     "tooltip-format": "{:%e %B %Y}"
   },
 
