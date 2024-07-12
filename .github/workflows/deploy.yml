@@ -21,7 +21,7 @@ jobs:
 
       - name: Download and install mdbook  
         run: |
-          version_tag="v0.4.40"
+          version_tag=v0.4.40
           url="https://github.com/rust-lang/mdbook/releases/download/${version_tag}/mdbook-${version_tag}-x86_64-unknown-linux-gnu.tar.gz"
           mkdir mdbook
           curl -sSl $url | tar -xz --directory=./mdbook
