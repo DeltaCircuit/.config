@@ -1,4 +1,7 @@
 return {
+  {
+    "nvim-telescope/telescope-file-browser.nvim"
+  },{
   "nvim-telescope/telescope.nvim",
   tag = "0.1.8",
   dependencies = { "nvim-lua/plenary.nvim", { "nvim-telescope/telescope-fzf-native.nvim", build = "make" } },
@@ -22,6 +25,7 @@ return {
     })
 
     telescope.load_extension("fzf")
+    telescope.load_extension("file_browser")
     --telescope.load_extension("git_worktree")
 
     local set = vim.keymap.set
@@ -37,5 +41,6 @@ return {
       builtin.current_buffer_fuzzy_find(telescope_themes.get_dropdown({ winblend = 10, previewer = false }))
     end, "[/] Fuzzy search in current buffer")
     nmap("<leader>gs", builtin.git_status, "[G]it [Status]")
+    nmap("<leader>ft", telescope.extensions.file_browser.file_browser(),"Open [F]ile [B]rowser")
   end,
-}
+}}
