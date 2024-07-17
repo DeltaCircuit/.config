@@ -9,6 +9,7 @@
 /* -----------------------------------------------------------------------------
  * Keyframes
  * -------------------------------------------------------------------------- */
+@import "mocha.css";
 
 @keyframes blink-warning {
     70% {
@@ -48,9 +49,9 @@
 
 /* The whole bar */
 #waybar {
-    background: #323232;
-    color: white;
-    font-family: Cantarell, Noto Sans, sans-serif;
+    background: transparent;
+    color: @text;
+    font-family: Fira Sans, Cantarell, Noto Sans, sans-serif;
     font-size: 13px;
 }
 
@@ -81,11 +82,11 @@
 }
 
 #battery.warning {
-    color: orange;
+    color: @maroon;
 }
 
 #battery.critical {
-    color: red;
+    color: @red;
 }
 
 #battery.warning.discharging {
@@ -107,11 +108,11 @@
 }
 
 #cpu.warning {
-    color: orange;
+    color: @maroon;
 }
 
 #cpu.critical {
-    color: red;
+    color: @red;
 }
 
 #memory {
@@ -121,11 +122,11 @@
 }
 
 #memory.warning {
-    color: orange;
+    color: @maroon;
 }
 
 #memory.critical {
-    color: red;
+    color: @red;
     animation-name: blink-critical;
     animation-duration: 2s;
 }
@@ -142,7 +143,7 @@
 }
 
 #network.disconnected {
-    color: orange;
+    color: @maroon;
 }
 
 #pulseaudio {
@@ -162,7 +163,7 @@
 }
 
 #temperature.critical {
-    color: red;
+    color: @red;
 }
 
 #tray {
@@ -173,22 +174,26 @@
     font-weight: bold;
 }
 
-#workspaces button {
-    border-top: 2px solid transparent;
-    /* To compensate for the top border and still have vertical centering */
-    padding-bottom: 2px;
-    padding-left: 10px;
-    padding-right: 10px;
-    color: #888888;
+#workspaces {
+  border-radius: 1rem;
+  margin: 5px;
+  background-color: @surface0;
+  margin-left: 1rem;
 }
 
-#workspaces button.focused {
-    border-color: #4c7899;
-    color: white;
-    background-color: #285577;
+#workspaces button {
+  color: @lavender;
+  border-radius: 1rem;
+  padding: 0.4rem;
 }
+
+#workspaces button:hover {
+  color: @sapphire;
+  border-radius: 1rem;
+}
+
 
 #workspaces button.urgent {
-    border-color: #c9545d;
-    color: #c9545d;
+    border-color: @red;
+    color: @red;
 }

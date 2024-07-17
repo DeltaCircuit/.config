@@ -5,12 +5,12 @@
   "layer": "bottom",
 
   "modules-left": [
-    "sway/scratchpad",
-    "sway/workspaces"
+    "hyprland/scratchpad",
+    "hyprland/workspaces"
   ],
 
   "modules-center": [
-    "sway/window"
+    "hyprland/window"
   ],
 
   "modules-right": [
@@ -82,12 +82,12 @@
     "tooltip-format": "{ifname}: {ipaddr}"
   },
 
-  "sway/mode": {
+  "hyprland/mode": {
     "format": "<span style=\"italic\">  {}</span>",
     "tooltip": false
   },
 
-   "sway/scratchpad": {
+   "hyprland/scratchpad": {
     "format": "{icon} {count}",
     "show-empty": false,
     "format-icons": ["", ""],
