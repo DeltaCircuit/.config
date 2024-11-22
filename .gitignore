@@ -9,3 +9,4 @@ systemd
 mimeapps*
 RawTherapee
 awesome-wm-widgets
+!gtk3.0
