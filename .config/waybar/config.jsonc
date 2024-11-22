@@ -209,5 +209,10 @@
             "suspend": "systemctl suspend",
             "hibernate": "systemctl hibernate"
         }
+    },
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false,
+        "format": "{name}"
     }
 }
