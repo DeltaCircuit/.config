@@ -1,6 +1,5 @@
 Code
 GIMP
-gtk*
 dconf
 htop
 libfm
@@ -9,4 +8,3 @@ systemd
 mimeapps*
 RawTherapee
 awesome-wm-widgets
-!gtk3.0
