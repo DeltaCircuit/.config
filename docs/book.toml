@@ -1,0 +1,6 @@
+[book]
+authors = ["DeltaCircuit"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Dotfiles Documentation"
