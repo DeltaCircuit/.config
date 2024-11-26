@@ -10,3 +10,12 @@ bindkey '^[[1;5C' forward-word
 
 #autoload -Uz compinit
 #compinits
+
+export LANG=en_IN.UTF-8
+
+# Load ZSH helpers
+for DOTFILE in `find ~/.local/zsh_helpers/`
+do
+  source "$DOTFILE"
+  [ -f “$DOTFILE” ] && source “$DOTFILE”
+done
