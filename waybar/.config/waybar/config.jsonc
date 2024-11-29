@@ -83,7 +83,7 @@
     },
     "clock#date": {
         "interval": 10,
-        "format": "  {:%Y-%m-%d}",
+        "format": "  {:%Y-%m-%d %a}",
         "tooltip-format": "{:%e %B %Y}"
     },
     "cpu": {
