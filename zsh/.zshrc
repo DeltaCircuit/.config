@@ -27,3 +27,9 @@ do
   [ -f “$DOTFILE” ] && source “$DOTFILE”
 done
 
+# Load generic shell helpers
+for helper in `find ~/.local/maverick/shell_helpers`
+do
+  source "$helper"
+done
+
