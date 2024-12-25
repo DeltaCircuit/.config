@@ -1,0 +1,28 @@
+theme = "catppuccin_mocha"
+
+[editor]
+idle-timeout = 0
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+auto-signature-help = false
+display-signature-help-docs = false
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[keys.insert]
+"C-/" = "toggle_comments"
+C-s = ":w"
+C-c = "normal_mode"
+C-space = "completion"
+C-z = "undo"
+
+[keys.normal]
+C-s = ":w"
+C-q = ":quit!"
+C-z = "undo"
+
